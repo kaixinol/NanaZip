@@ -16,6 +16,7 @@
 #define IDX_SETTINGS_LOWERCASE_HASHES       2513
 // **************** NanaZip Modification Start ****************
 #define IDX_SETTINGS_SHOW_FILE_SIZE_UNITS   2515
+#define IDX_SETTINGS_INVERT_THEME           2516
 // **************** NanaZip Modification End ****************
 
 // **************** NanaZip Modification Start ****************
