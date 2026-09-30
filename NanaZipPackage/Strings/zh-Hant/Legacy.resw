@@ -827,6 +827,9 @@
   <data name="Resource3433" xml:space="preserve">
     <value>解壓縮後開啟目標資料夾</value>
   </data>
+  <data name="Resource3434" xml:space="preserve">
+    <value>開啟時解壓縮（按住 Shift 略過）</value>
+  </data>
   <data name="Resource3440" xml:space="preserve">
     <value>傳遞 Zone.Id 資料流:</value>
   </data>
@@ -1358,5 +1361,11 @@
   </data>
   <data name="Resource7714" xml:space="preserve">
     <value>目錄連接點</value>
+  </data>
+  <data name="Resource12200" xml:space="preserve">
+    <value>整合</value>
+  </data>
+  <data name="Resource12201" xml:space="preserve">
+    <value>開啟 Windows 設定應用程式，將檔案與 NanaZip 建立關聯</value>
   </data>
 </root>
