@@ -828,6 +828,9 @@ Kívánja aktualizálni az archívumban?</value>
   <data name="Resource3433" xml:space="preserve">
     <value>Mappa megnyitása a kibontás után</value>
   </data>
+  <data name="Resource3434" xml:space="preserve">
+    <value>Kibontás megnyitáskor (tartsa nyomva a Shiftet a kihagyáshoz)</value>
+  </data>
   <data name="Resource3440" xml:space="preserve">
     <value>Terjessze a Zone.Id adatfolyamot:</value>
   </data>
