@@ -318,6 +318,9 @@
   <data name="Resource1018" xml:space="preserve">
     <value>Словарь</value>
   </data>
+  <data name="Resource1019" xml:space="preserve">
+    <value>CRC</value>
+  </data>
   <data name="Resource1020" xml:space="preserve">
     <value>Тип</value>
   </data>
@@ -823,6 +826,9 @@
   </data>
   <data name="Resource3433" xml:space="preserve">
     <value>Открыть папку после распаковки</value>
+  </data>
+  <data name="Resource3434" xml:space="preserve">
+    <value>Распаковывать при открытии (удерживайте Shift, чтобы пропустить)</value>
   </data>
   <data name="Resource3440" xml:space="preserve">
     <value>Распространять поток Zone.Id:</value>
