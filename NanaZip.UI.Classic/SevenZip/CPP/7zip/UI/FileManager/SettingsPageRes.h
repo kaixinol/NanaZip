@@ -15,7 +15,7 @@
 #define IDX_SETTINGS_WANT_FOLDER_HISTORY    2512
 #define IDX_SETTINGS_LOWERCASE_HASHES       2513
 // **************** NanaZip Modification Start ****************
-#define IDX_SETTINGS_SHOW_FILE_SIZE_UNITS   2515
+#define IDX_SETTINGS_SHOW_FILE_SIZE_UNITS   3515
 // **************** NanaZip Modification End ****************
 
 
