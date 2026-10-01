@@ -317,4 +317,22 @@ EXTERN_C LPVOID WINAPI K7ModernCreateMainWindowToolBarPage(
  */
 EXTERN_C VOID WINAPI K7ModernRefreshTheme();
 
+/**
+ * @brief Refreshes the XAML theme of the island hosted in the given
+ *        window, and refreshes it again once the island content has
+ *        finished loading.
+ * @param IslandWindowHandle The window hosting the XAML island, that is
+ *                           the window carrying the "XamlWindowSource"
+ *                           property set by NanaZip.Modern.
+ * @remark The global Application.RequestedTheme cannot be changed after
+ *         XAML content exists, so a newly created island starts with the
+ *         default theme and has to be refreshed explicitly. Islands
+ *         whose content has not finished loading are skipped by the
+ *         refresh, so the theme is applied again from the Loaded event.
+ *         This function must be called on the thread that initialized
+ *         the modern experience.
+ */
+EXTERN_C VOID WINAPI K7ModernRefreshIslandTheme(
+    _In_ HWND IslandWindowHandle);
+
 #endif // !NANAZIP_MODERN_EXPERIENCE

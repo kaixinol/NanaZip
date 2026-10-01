@@ -16,4 +16,7 @@ BEGIN
 
   IDS_OPENNING  "Opening..."
   IDS_SCANNING  "Scanning..."
+
+  IDS_SETTINGS_INVERT_THEME_RESTART
+      "Please restart NanaZip to apply the inverted dark/light theme completely."
 END

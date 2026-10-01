@@ -427,3 +427,26 @@ EXTERN_C VOID WINAPI K7ModernRefreshTheme()
         ProcAddress();
     }
 }
+
+EXTERN_C VOID WINAPI K7ModernRefreshIslandTheme(
+    _In_ HWND IslandWindowHandle)
+{
+    using ProcType = decltype(::K7ModernRefreshIslandTheme)*;
+
+    static ProcType ProcAddress = reinterpret_cast<ProcType>([]() -> FARPROC
+    {
+        HMODULE ModuleHandle = ::GetNanaZipModernModuleHandle();
+        if (ModuleHandle)
+        {
+            return ::GetProcAddress(
+                ModuleHandle,
+                "K7ModernRefreshIslandTheme");
+        }
+        return nullptr;
+    }());
+
+    if (ProcAddress)
+    {
+        ProcAddress(IslandWindowHandle);
+    }
+}

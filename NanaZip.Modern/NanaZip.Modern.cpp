@@ -617,6 +617,61 @@ EXTERN_C VOID WINAPI K7ModernRefreshTheme()
     }
 }
 
+EXTERN_C VOID WINAPI K7ModernRefreshIslandTheme(
+    _In_ HWND IslandWindowHandle)
+{
+    // Refresh every island first: the caller has just created one, and
+    // the islands created earlier have to follow the same theme.
+    ::K7ModernRefreshTheme();
+
+    if (!IslandWindowHandle)
+    {
+        return;
+    }
+
+    // The refresh above skips the islands whose XAML content has not
+    // been loaded yet, so apply the theme again when the content
+    // actually finishes loading. Loaded is a FrameworkElement event, so
+    // query the content for FrameworkElement first.
+    try
+    {
+        winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource
+            XamlSource = nullptr;
+        winrt::copy_from_abi(
+            XamlSource,
+            ::GetPropW(IslandWindowHandle, L"XamlWindowSource"));
+        if (!XamlSource)
+        {
+            return;
+        }
+
+        auto Content = XamlSource.Content();
+        if (!Content)
+        {
+            return;
+        }
+
+        winrt::Windows::UI::Xaml::FrameworkElement ContentElement =
+            Content.try_as<winrt::Windows::UI::Xaml::FrameworkElement>();
+        if (!ContentElement)
+        {
+            return;
+        }
+
+        ContentElement.Loaded(
+            [](
+                winrt::Windows::Foundation::IInspectable const&,
+                winrt::Windows::UI::Xaml::RoutedEventArgs const&)
+            {
+                ::K7ModernRefreshTheme();
+            });
+    }
+    catch (...)
+    {
+        // Best effort: the island or its content may not be ready yet.
+    }
+}
+
 namespace winrt
 {
     using Windows::UI::Xaml::Hosting::DesktopWindowXamlSource;

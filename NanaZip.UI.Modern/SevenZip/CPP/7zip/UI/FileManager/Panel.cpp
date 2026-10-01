@@ -450,23 +450,11 @@ bool CPanel::OnCreate(CREATESTRUCT * /* createStruct */)
       XamlSource.Content().TabFocusNavigation(KeyboardNavigationMode::Local);
 
       // **************** NanaZip Modification Start ****************
-      // Apply the current theme to every island created so far right after
-      // creation (global Application.RequestedTheme cannot be set at runtime).
-      ::K7ModernRefreshTheme();
-      // K7ModernRefreshTheme skips islands whose XAML content has not been
-      // loaded yet ("no content"), so also re-apply when the content
-      // actually finishes loading. Loaded is a FrameworkElement event, so
-      // query the content for FrameworkElement first.
-      if (auto ContentElement = XamlSource.Content().try_as<
-          winrt::Windows::UI::Xaml::FrameworkElement>())
-      {
-          ContentElement.Loaded(
-              [](winrt::Windows::Foundation::IInspectable const&,
-                  winrt::Windows::UI::Xaml::RoutedEventArgs const&)
-          {
-              ::K7ModernRefreshTheme();
-          });
-      }
+      // The global Application.RequestedTheme cannot be set
+      // after XAML content exists, so a newly created island
+      // starts with the default theme and has to be refreshed
+      // explicitly.
+      ::K7ModernRefreshIslandTheme(_addressBarWindow);
       // **************** NanaZip Modification End ****************
 
       XamlSource.TakeFocusRequested(
@@ -576,24 +564,11 @@ bool CPanel::OnCreate(CREATESTRUCT * /* createStruct */)
       XamlSource.Content().TabFocusNavigation(KeyboardNavigationMode::Local);
 
       // **************** NanaZip Modification Start ****************
-      // Apply the current theme to every island created so far right after
-      // creation (global Application.RequestedTheme cannot be set at runtime).
-      ::K7ModernRefreshTheme();
-      // K7ModernRefreshTheme skips islands whose XAML content has not been
-      // loaded yet ("no content"), so also re-apply when the content
-      // actually finishes loading. This is essential for the status bar,
-      // whose content loads after the panel creation code runs. Loaded is a
-      // FrameworkElement event, so query the content for it first.
-      if (auto ContentElement = XamlSource.Content().try_as<
-          winrt::Windows::UI::Xaml::FrameworkElement>())
-      {
-          ContentElement.Loaded(
-              [](winrt::Windows::Foundation::IInspectable const&,
-                  winrt::Windows::UI::Xaml::RoutedEventArgs const&)
-          {
-              ::K7ModernRefreshTheme();
-          });
-      }
+      // The global Application.RequestedTheme cannot be set
+      // after XAML content exists, so a newly created island
+      // starts with the default theme and has to be refreshed
+      // explicitly.
+      ::K7ModernRefreshIslandTheme(_statusBarWindow);
       // **************** NanaZip Modification End ****************
 
       XamlSource.TakeFocusRequested(
@@ -1207,17 +1182,16 @@ void CPanel::AddToExistingArchive()
     }
 
     // **************** NanaZip Modification Start ****************
-    // The native theme suspend scope (NativeThemeDialogScope) keeps the
-    // whole dialog on the unmodified system appearance for its lifetime.
-    const HRESULT ShowResult = FileDialog->Show(GetParent());
+    // The native theme suspend scope declared above keeps the whole
+    // dialog on the unmodified system appearance for its lifetime.
+    // **************** NanaZip Modification End ****************
 
     CMyComPtr<IShellItemArray> Items;
-    if (FAILED(ShowResult) ||
+    if (FAILED(FileDialog->Show(GetParent())) ||
         FAILED(FileDialog->GetResults(&Items)))
     {
         return;
     }
-    // **************** NanaZip Modification End ****************
 
     UStringVector SelectedPaths;
     DWORD Count;

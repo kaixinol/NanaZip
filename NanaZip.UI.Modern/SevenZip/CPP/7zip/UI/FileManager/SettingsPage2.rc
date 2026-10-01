@@ -22,11 +22,12 @@ BEGIN
   // **************** NanaZip Modification End ****************
 
   // **************** NanaZip Modification Start ****************
-  LTEXT     "Language:",           IDT_SETTINGS_LANGUAGE,             m, 224, xc, 8
-  COMBOBOX                         IDC_SETTINGS_LANGUAGE,             m, 236, xc, 48, MY_COMBO
+  // The combo box is a drop-down list, so its height is only the height of
+  // the closed control, and the next control may follow it closely.
+  LTEXT     "Language:",           IDT_SETTINGS_LANGUAGE,             m, 226, xc, 8
+  COMBOBOX                         IDC_SETTINGS_LANGUAGE,             m, 238, xc, 48, MY_COMBO
+  CONTROL   "&Invert Dark Mode",   IDX_SETTINGS_INVERT_THEME,         MY_CHECKBOX, m, 258, xc, 10
   // **************** NanaZip Modification End ****************
-
-  CONTROL  "&Invert Dark Mode",    IDX_SETTINGS_INVERT_THEME,         MY_CHECKBOX, m, 296, xc, 10
 
   // LTEXT     "Memory usage for Compressing:", IDT_COMPRESS_MEMORY, m, 140, xc, 8
   // COMBOBOX  IDC_SETTINGS_MEM, m , 152, g1xs, yc - 152, MY_COMBO

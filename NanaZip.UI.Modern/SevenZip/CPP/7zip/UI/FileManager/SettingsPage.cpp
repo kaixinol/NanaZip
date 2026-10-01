@@ -18,6 +18,10 @@
 #include "SettingsPageRes.h"
 
 // **************** NanaZip Modification Start ****************
+#include "resourceGui.h"
+// **************** NanaZip Modification End ****************
+
+// **************** NanaZip Modification Start ****************
 #include <K7User.h>
 #include <NanaZip.Modern.h>
 // **************** NanaZip Modification End ****************
@@ -269,6 +273,12 @@ LONG CSettingsPage::OnApply()
         IDX_SETTINGS_SHOW_FILE_SIZE_UNITS);
     // **************** NanaZip Modification End ****************
 
+    // **************** NanaZip Modification Start ****************
+    // Read the stored value before it is overwritten by st.Save(), so
+    // that the restart notice is shown only when the inversion changed.
+    bool const InvertThemeWasEnabled = ::WantInvertTheme();
+    // **************** NanaZip Modification End ****************
+
     st.Save();
     _wasChanged = false;
 
@@ -276,6 +286,17 @@ LONG CSettingsPage::OnApply()
     // Re-check the dark/light inversion immediately after saving.
     ::K7UserRefreshTheme();
     ::K7ModernRefreshTheme();
+
+    // Windows that were created before the inversion was switched keep
+    // their old theme state, so ask for a restart to repaint them all.
+    if (InvertThemeWasEnabled != st.InvertTheme)
+    {
+      ::MessageBoxW(
+        *this,
+        ::LangString(IDS_SETTINGS_INVERT_THEME_RESTART),
+        L"NanaZip",
+        MB_OK | MB_ICONINFORMATION);
+    }
     // **************** NanaZip Modification End ****************
   }
 

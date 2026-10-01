@@ -13,3 +13,7 @@
 #define IDS_CHECKSUM_CRC_STREAMS_NAMES  7504
 
 #define IDS_INCORRECT_VOLUME_SIZE       7307
+
+// **************** NanaZip Modification Start ****************
+#define IDS_SETTINGS_INVERT_THEME_RESTART  3517
+// **************** NanaZip Modification End ****************

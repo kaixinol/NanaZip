@@ -3,8 +3,9 @@
 
 #define xc 240
 // **************** NanaZip Modification Start ****************
+// The last control ends at y = 268, so the dialog only needs to reach 280.
 // #define yc 250
-#define yc 320
+#define yc 280
 // **************** NanaZip Modification End ****************
 
 IDD_SETTINGS  MY_PAGE
