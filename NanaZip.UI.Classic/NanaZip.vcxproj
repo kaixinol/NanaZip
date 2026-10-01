@@ -9,12 +9,12 @@
     <MileProjectEnableCppWinRTSupport>true</MileProjectEnableCppWinRTSupport>
     <CppWinRTGenerateWindowsMetadata>false</CppWinRTGenerateWindowsMetadata>
     <MileProjectUseProjectProperties>true</MileProjectUseProjectProperties>
-    <MileProjectCompanyName>M2-Team</MileProjectCompanyName>
-    <MileProjectFileDescription>NanaZip Graphical User Interface</MileProjectFileDescription>
+    <MileProjectCompanyName>kaixinol</MileProjectCompanyName>
+    <MileProjectFileDescription>NanaZip Rev Graphical User Interface (fork)</MileProjectFileDescription>
     <MileProjectInternalName>NanaZip</MileProjectInternalName>
-    <MileProjectLegalCopyright>© M2-Team and Contributors. All rights reserved.</MileProjectLegalCopyright>
+    <MileProjectLegalCopyright>© kaixinol. Forked from M2-Team and Contributors. All rights reserved.</MileProjectLegalCopyright>
     <MileProjectOriginalFilename>NanaZip.exe</MileProjectOriginalFilename>
-    <MileProjectProductName>NanaZip</MileProjectProductName>
+    <MileProjectProductName>NanaZip Rev</MileProjectProductName>
     <MileWindowsHelpersNoCppWinRTHelpers>true</MileWindowsHelpersNoCppWinRTHelpers>
   </PropertyGroup>
   <Import Project="..\NanaZip.Project\NanaZip.Project.props" />

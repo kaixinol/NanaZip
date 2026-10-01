@@ -52,7 +52,7 @@ extern CStdOutStream *g_StdStream;
 //"\n7-Zip SFX " MY_VERSION_CPU " : " MY_COPYRIGHT_DATE "\n";
 static const char* const kCopyrightString =
 "\nNanaZip SFX " MILE_PROJECT_VERSION_UTF8_STRING " (" MY_CPU_NAME ")"
-" : " "(c) M2-Team and Contributors. All rights reserved." "\n";
+" : " "(c) kaixinol. Forked from M2-Team and Contributors. All rights reserved." "\n";
 // **************** NanaZip Modification End ****************
 
 static const int kNumSwitches = 6;

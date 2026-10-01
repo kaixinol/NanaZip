@@ -63,7 +63,7 @@ void NanaZip::FileManager::AboutDialog::Show(
 
         if (TDN_BUTTON_CLICKED == msg && IDB_ABOUT_HOMEPAGE == wParam)
         {
-            OpenWebSite(L"https://github.com/M2Team/NanaZip");
+            OpenWebSite(L"https://github.com/kaixinol/NanaZip");
             return S_FALSE;
         }
 
@@ -74,7 +74,7 @@ void NanaZip::FileManager::AboutDialog::Show(
         ::LangString(IDD_ABOUT));
     if (WindowTitle.empty())
     {
-        WindowTitle = L"About NanaZip";
+        WindowTitle = L"About NanaZip Rev";
     }
 
     std::wstring WindowMainInstruction = std::wstring(

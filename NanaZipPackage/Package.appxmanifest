@@ -19,13 +19,13 @@
   IgnorableNamespaces="uap rescap desktop uap2 uap3 com desktop4 desktop5 desktop6 desktop10 uap8 uap10 uap16 uap17">
 
   <Identity
-    Name="40174MouriNaruto.NanaZipPreview"
-    Publisher="CN=E310A153-74A9-4D81-800B-857A8D58408A"
-    Version="7.0.1845.0" />
+    Name="kaixinol.NanaZipRev"
+    Publisher="CN=kaixinol"
+    Version="7.0.1848.0" />
 
   <Properties>
-    <DisplayName>NanaZip Preview</DisplayName>
-    <PublisherDisplayName>Kenji Mouri</PublisherDisplayName>
+    <DisplayName>NanaZip Rev</DisplayName>
+    <PublisherDisplayName>kaixinol</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
     <uap10:PackageIntegrity>
       <uap10:Content Enforcement="on" />
@@ -54,13 +54,13 @@
       Executable="NanaZip.Modern.FileManager.exe"
       EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements
-        DisplayName="NanaZip Preview"
-        Description="NanaZip"
+        DisplayName="NanaZip Rev"
+        Description="NanaZip Rev (fork of M2Team/NanaZip)"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
         <uap:DefaultTile
-          ShortName="NanaZip"
+          ShortName="NanaZip Rev"
           Wide310x150Logo="Assets\Wide310x150Logo.png"
           Square310x310Logo="Assets\LargeTile.png"
           Square71x71Logo="Assets\SmallTile.png">
@@ -184,8 +184,8 @@
       EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements
         AppListEntry="none"
-        DisplayName="NanaZip Preview"
-        Description="NanaZip"
+        DisplayName="NanaZip Rev"
+        Description="NanaZip Rev (fork of M2Team/NanaZip)"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png" />
@@ -208,8 +208,8 @@
       EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements
         AppListEntry="none"
-        DisplayName="NanaZip Preview"
-        Description="NanaZip"
+        DisplayName="NanaZip Rev"
+        Description="NanaZip Rev (fork of M2Team/NanaZip)"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png" />

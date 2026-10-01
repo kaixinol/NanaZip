@@ -1,6 +1,23 @@
 ﻿# NanaZip License
 
-For giving the maximum respect for the upstream projects and following the 
+> **Fork addendum (NanaZip Rev)**: This file is a verbatim copy of the
+> upstream license notice as of the fork base (upstream commit `a6fc1284`).
+> The fork is maintained by **kaixinol** and clearly differentiated from
+> upstream via:
+>
+> | Field | Upstream | Fork |
+> |---|---|---|
+> | Application Identity | `40174MouriNaruto.NanaZipPreview` | `kaixinol.NanaZipRev` |
+> | Publisher | `CN=E310A153-74A9-4D81-800B-857A8D58408A` | `CN=kaixinol` (self-signed) |
+> | Version | `7.0.1845.0` | `7.0.1848.0` |
+> | Repository | `M2Team/NanaZip` | `kaixinol/NanaZip` |
+> | WinGet identifier | `M2Team.NanaZip` | `kaixinol.NanaZipRev` |
+>
+> No upstream content below has been removed; only metadata has been
+> added. The full multi-license breakdown (MIT + LGPL + BSD 3-clause +
+> CC BY-ND 4.0) is preserved.
+
+For giving the maximum respect for the upstream projects and following the
 philosophy about open-source software from Kenji Mouri (MouriNaruto), the one
 of the M2-Team founders. 
 

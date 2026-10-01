@@ -29,12 +29,12 @@ namespace winrt::NanaZip::Modern::implementation
             ::K7ModernGetLegacyStringResource(2900));
         if (WindowTitle.empty())
         {
-            WindowTitle = L"About NanaZip";
+            WindowTitle = L"About NanaZip Rev";
         }
         ::SetWindowTextW(this->m_WindowHandle, WindowTitle.c_str());
 
         std::wstring Version = std::wstring(
-            "NanaZip " MILE_PROJECT_VERSION_STRING);
+            "NanaZip Rev " MILE_PROJECT_VERSION_STRING);
         Version.append(
             L" (" MILE_PROJECT_DOT_VERSION_STRING L")");
 #if defined(_M_AMD64)

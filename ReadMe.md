@@ -1,4 +1,29 @@
-﻿# ![NanaZip](Assets/NanaZip.png) NanaZip
+﻿# ![NanaZip](Assets/NanaZip.png) NanaZip Rev
+
+> [!WARNING]
+> Unofficial community fork of [M2Team/NanaZip](https://github.com/M2Team/NanaZip),
+> maintained by [kaixinol](https://github.com/kaixinol). NOT endorsed by or
+> affiliated with Kenji Mouri, M2-Team, or Microsoft. For the official
+> NanaZip, see [M2Team/NanaZip](https://github.com/M2Team/NanaZip).
+>
+> MSIX Identity `kaixinol.NanaZipRev` cannot co-exist with upstream
+> `40174MouriNaruto.NanaZipPreview`; installing one replaces the other.
+> `winget install --id kaixinol.NanaZipRev`
+
+## What this fork adds
+
+- IEC binary size units (KiB / MiB / GiB) in file listings.
+- Language-selection UI in the Modern File Manager.
+- Additional translation maturity (es, it, ko, pt-BR).
+
+See [CHANGELOG.md](CHANGELOG.md) for per-commit history.
+
+---
+
+<details>
+<summary>📦 Original upstream ReadMe.md (preserved verbatim — click to expand for cherry-pick reference)</summary>
+
+# ![NanaZip](Assets/NanaZip.png) NanaZip
 
 [![GitHub Actions Build Status](https://github.com/M2Team/NanaZip/actions/workflows/BuildBinaries.yml/badge.svg?branch=master&event=push)](https://github.com/M2Team/NanaZip/actions/workflows/BuildBinaries.yml?query=event%3Apush+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/github/downloads/M2Team/NanaZip/total)](https://github.com/M2Team/NanaZip/releases)
@@ -270,7 +295,7 @@ to install NanaZip.
 > must connect to the Internet and launch it once so that Windows can acquire
 > the required license. Otherwise, NanaZip may not launch properly.
 
-[Install and update the App Installer - MSIX | Microsoft Learn]: https://learn.microsoft.com/en-us/windows/msix/app-installer/install-update-app-installer
+[Install and update the App Installer - MSIX | Microsoft Learn]: https://learn.microsoft.com/en-us/windows/msix/app-installer/install-update-appx-package
 
 #### Command Line (With license file)
 
@@ -300,15 +325,15 @@ If you open the PowerShell as Administrator, you can execute:
 
 If your downloaded NanaZip release doesn't provide the XML license file, or you
 don't want to install NanaZip for all users, you can use the following command
-to install NanaZip for the current user.
+to install the package for the current user.
 
 If you open the PowerShell as Administrator, you can execute:
 
-> Add-AppxPackage -DeferRegistrationWhenPackagesAreInUse -ForceUpdateFromAnyVersion -Path `The path of the MSIX package`
+> Add-AppxPackage -DeferRegistrationWhenPackagesInUse -ForceUpdateFromAnyVersion -Path `The path of the MSIX package`
 
 If you open the Command Prompt as Administrator, you can execute:
 
-> PowerShell -NoLogo -NoProfile -NonInteractive -InputFormat None -ExecutionPolicy Bypass Add-AppxPackage -DeferRegistrationWhenPackagesAreInUse -ForceUpdateFromAnyVersion -Path `The path of the MSIX package`
+> PowerShell -NoLogo -NoProfile -NonInteractive -InputFormat None -ExecutionPolicy Bypass Add-AppxPackage -DeferRegistrationWhenPackagesInUse -ForceUpdateFromAnyVersion -Path `The path of the MSIX package`
 
 > [!CAUTION]
 > If NanaZip is installed using this method without an Internet connection, you
@@ -317,9 +342,9 @@ If you open the Command Prompt as Administrator, you can execute:
 
 #### Useful Links
 
-- https://learn.microsoft.com/en-us/powershell/module/appx/add-appxpackage
-- https://learn.microsoft.com/en-us/powershell/module/dism/add-appxprovisionedpackage
-- https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options
+- <https://learn.microsoft.com/powershell/module/appx/add-appxpackage>
+- <https://learn.microsoft.com/powershell/module/dism/add-appxprovisionedpackage>
+- <https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options>
 
 ## Known issues
 
@@ -336,14 +361,14 @@ If you open the Command Prompt as Administrator, you can execute:
   `%UserProfile%/AppData` will still be redirected in Windows 11.
 - Due to the Microsoft Store limitations, NanaZip 1.2 and later won't support
   languages not mentioned in
-  https://docs.microsoft.com/en-us/windows/uwp/publish/supported-languages.
+  <https://docs.microsoft.com/en-us/windows/uwp/publish/supported-languages>.
 - If you turn off the Windows Firewall, NanaZip may fail to install.
-  (https://github.com/M2Team/NanaZip/issues/204)
-  (https://github.com/microsoft/terminal/issues/12269)
+  (<https://github.com/M2Team/NanaZip/issues/204>)
+  (<https://github.com/microsoft/terminal/issues/12269>)
 - Due to the System Settings limitations, starting with Windows 11+
-  (Build 22000.1817+ & 22621.1555+), you can launch directly to the Settings
+  (Build 22000.1817+ & 22621.1555+), when you launch directly to the Settings
   page for file association for NanaZip.
-  (https://learn.microsoft.com/en-us/windows/uwp/launch-resume/launch-default-apps-settings)
+  (<https://learn.microsoft.com/en-us/windows/uwp/launch-resume/launch-default-apps-settings>)
 - Due to the Microsoft Store Licensing API implementation, you will find NanaZip
   will try to access the Internet beginning with NanaZip 3.0 because NanaZip
   needs to use that to check the Sponsor Edition addon licensing status.
@@ -368,3 +393,5 @@ If you open the Command Prompt as Administrator, you can execute:
 - [Security Policy](Security.md)
 - [Versioning](Documents/Versioning.md)
 - [My Digital Life Forums](https://forums.mydigitallife.net/threads/84171)
+
+</details>

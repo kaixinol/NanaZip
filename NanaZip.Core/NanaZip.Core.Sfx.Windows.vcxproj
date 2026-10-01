@@ -6,12 +6,12 @@
     <MileProjectType>WindowsApplication</MileProjectType>
     <MileProjectManifestFile>NanaZip.Core.Sfx.Windows.manifest</MileProjectManifestFile>
     <MileProjectUseProjectProperties>true</MileProjectUseProjectProperties>
-    <MileProjectCompanyName>M2-Team</MileProjectCompanyName>
-    <MileProjectFileDescription>NanaZip Self Extracting Executable (Windows)</MileProjectFileDescription>
+    <MileProjectCompanyName>kaixinol</MileProjectCompanyName>
+    <MileProjectFileDescription>NanaZip Rev Self Extracting Executable (Windows) (fork)</MileProjectFileDescription>
     <MileProjectInternalName>NanaZip.Core.Sfx.Windows</MileProjectInternalName>
-    <MileProjectLegalCopyright>© M2-Team and Contributors. All rights reserved.</MileProjectLegalCopyright>
+    <MileProjectLegalCopyright>© kaixinol. Forked from M2-Team and Contributors. All rights reserved.</MileProjectLegalCopyright>
     <MileProjectOriginalFilename>NanaZip.Core.Windows.sfx</MileProjectOriginalFilename>
-    <MileProjectProductName>NanaZip</MileProjectProductName>
+    <MileProjectProductName>NanaZip Rev</MileProjectProductName>
     <MileWindowsHelpersNoCppWinRTHelpers>true</MileWindowsHelpersNoCppWinRTHelpers>
   </PropertyGroup>
   <Import Project="..\NanaZip.Project\NanaZip.Project.props" />

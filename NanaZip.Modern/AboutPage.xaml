@@ -22,7 +22,7 @@
       <TextBlock>
         <Run x:Name="Version" />
         <LineBreak />
-        <Run Text="© M2-Team and Contributors. All rights reserved." />
+        <Run Text="© kaixinol. Forked from M2-Team and Contributors. All rights reserved." />
         <LineBreak />
         <LineBreak />
         <Run x:Name="Content" />

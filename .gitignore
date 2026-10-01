@@ -413,3 +413,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# WorkBuddy memory/notes/tmp (developer-machine hygiene)
+.workbuddy/
+
+# kaixinol-internal cherry-pick handoff notes (personal workflow, not part of fork)
+CHERRYPICK_HANDOFF.md

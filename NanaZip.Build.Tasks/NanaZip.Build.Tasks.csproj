@@ -6,7 +6,7 @@
     <LangVersion>default</LangVersion>
     <Nullable>enable</Nullable>
     <Authors>M2-Team</Authors>
-    <Copyright>© M2-Team and Contributors. All rights reserved.</Copyright>
+    <Copyright>© kaixinol. Forked from M2-Team and Contributors. All rights reserved.</Copyright>
     <Version>$(MileProjectVersion)</Version>
     <MileDotNetHelpersEnableGitHelpers>true</MileDotNetHelpersEnableGitHelpers>
     <MileDotNetHelpersEnableTextHelpers>true</MileDotNetHelpersEnableTextHelpers>

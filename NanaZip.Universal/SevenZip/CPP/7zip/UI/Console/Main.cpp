@@ -133,7 +133,7 @@ DECLARE_AND_SET_CLIENT_VERSION_VAR
 static const char * const kCopyrightString = "\nNanaZip"
   PROG_POSTFIX_2
   " " MILE_PROJECT_VERSION_UTF8_STRING " (" MY_CPU_NAME ")"
-  " : " "(c) M2-Team and Contributors. All rights reserved." "\n";
+  " : " "(c) kaixinol. Forked from M2-Team and Contributors. All rights reserved." "\n";
 // **************** NanaZip Modification End ****************
 
 static const char * const kHelpString =

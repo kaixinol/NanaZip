@@ -1,6 +1,6 @@
 ﻿#define AppName "NanaZip Extension Package"
 #define AppPublisher "M2-Team"
-#define AppCopyright "© M2-Team and Contributors. All rights reserved."
+#define AppCopyright "© kaixinol. Forked from M2-Team and Contributors. All rights reserved."
 #define AppURL "https://github.com/M2Team/NanaZip"
 
 #ifndef AppVersion
